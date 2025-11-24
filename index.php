@@ -14,5 +14,9 @@ if (!empty($html)) {
     }
 } else {
     echo "No HTML content received!";
+        $html = " <!DOCTYPE html> <html> <head> <title>My Generated Page</title> </head> <body> <h1>Hello from PHP!</h1> <p>This HTML file was created automatically.</p> </body> </html> ";
+         if (file_put_contents($filename, $html) !== false) {
+        echo "HTML file '$filename' created/updated successfully!";
+    }
 }
 ?>
